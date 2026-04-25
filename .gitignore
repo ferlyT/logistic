@@ -10,5 +10,9 @@ backend/.env
 .vscode/
 .idea/
 
+# Project Management
+issue.md
+promnt.txt
+
 # Misc
 .DS_Store
