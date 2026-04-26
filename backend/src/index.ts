@@ -1,8 +1,15 @@
+/**
+ * Entry point utama aplikasi Elysia JS.
+ */
 import { Elysia } from "elysia";
 import { db } from "./db";
 import { users } from "./db/schema";
+import { userRoutes } from "./routes/user-route";
 
 const app = new Elysia()
+  // Mendaftarkan rute user ke dalam aplikasi
+  .use(userRoutes)
+  // Health check endpoint
   .get("/", () => ({
     status: "ok",
     message: "Logistic Backend API is running",
